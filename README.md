@@ -1,7 +1,8 @@
 # Blogger
 Blogger web project
 
-| --- | --- | --- |
+|   |    |
+| --- | --- |
 | ![](/screenshots/image1.png) | ![](/screenshots/image2.png) |
 
 # License
