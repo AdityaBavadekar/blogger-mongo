@@ -1,6 +1,9 @@
 # Blogger
 Blogger web project
 
+| --- | --- | --- |
+| ![](/screenshots/image1.png) | ![](/screenshots/image2.png) |
+
 # License
 ```
    Copyright 2024 Aditya Bavadekar
