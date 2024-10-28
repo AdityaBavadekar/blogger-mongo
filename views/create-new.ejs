@@ -1,0 +1,37 @@
+<h1>Create a new Blog</h1>
+<div class="mb-5">
+    <div class="btn-group my-3">
+        <button type="button" class="btn btn-outline-primary active me-2" id="btn-tab-editor">Editor</button>
+        <button type="button" class="btn btn-outline-primary" id="btn-tab-preview">Preview</button>
+    </div>
+    <div id="tab-editor" class="border border-1 p-3 rounded">
+        <div class="input-group">
+            <input type="text" name="post-thumbnail-url" id="post-thumbnail-url" class="p-3 my-2 form-control" placeholder="Thumbnail Image url">
+            <img src="https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg?t=st=1730090850~exp=1730094450~hmac=43054bde5b1e77272e71e2d996ecbe9bf14bf2e35b3c755edcdf6097dcc8c779&w=1380" alt="Thumbnail Image" id="thumbnail-img" width="100px" height="100px" class="p-3 rounded-circle">
+        </div>
+        <div class="input-group">
+            <textarea type="text" name="post-title-input" id="post-title-input" class="fs-1 p-3 my-2 form-control" placeholder="Title" rows="1"></textarea>
+        </div>
+        <div class="input-group">
+            <textarea type="text" name="post-content-input" id="post-content-input" class="p-3 my-2 form-control" placeholder="Write here" rows="15"></textarea>
+        </div>
+    </div>
+    <div id="tab-preview" class="border border-1 p-3 rounded d-none">
+        <%- include('partials/post_item.ejs') %>
+    </div>
+</div>
+<div class="container justify-content-center w-100 d-flex">
+    <button type="button" class="btn btn-success py-2 px-5" id="btn-publish">Publish</button>
+</div>
+
+<script type="module" src="/js/create_new.js"></script>
+
+<style>
+    #p-post-content img {
+        padding: 8px;
+        border: solid 1px grey;
+        border-radius: 8px;
+        align-self: center;
+        margin: 18px 0;
+    }
+</style>

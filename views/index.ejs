@@ -1,0 +1,23 @@
+<h1>Latest Posts</h1>
+<ul id="posts-list" class="mt-5 list-group list-unstyled d-flex justify-content-center flex-sm-row flex-column gap-3 flex-wrap">
+    <% posts.forEach(post => { %>
+        <li class="col-md-5 col-sm" id="disp-post-item">
+            <a href="/post/<%= post._id %>" class="text-decoration-none">
+                <div class="container card p-0 d-flex">
+                    <img src="<%= post.thumbnailUrl ? post.thumbnailUrl : 'https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg?t=st=1730090850~exp=1730094450~hmac=43054bde5b1e77272e71e2d996ecbe9bf14bf2e35b3c755edcdf6097dcc8c779&w=1380' %>" alt="Image" class="rounded img-fluid">
+                    <div class="container py-3 px-4">
+                        <p id="post-title" class="fs-4 fw-bold"><%= post.title %></p>
+                        <p id="post-author" class="opacity-75 fw-medium"><%= post.author %> • <span id="post-timestamp" class="fs-6 fw-light "><%= post.createdAt.toDateString() %></span>
+                        </p>
+                        <p id="post-content" class="opacity-50"><%= post.content %></p>
+                    </div>
+                </div>
+            </a>
+        </li>
+    <% }) %>
+</ul>
+<style>
+    #disp-post-item:hover {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+</style>

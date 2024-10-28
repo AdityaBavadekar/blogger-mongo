@@ -1,0 +1,28 @@
+<div class="ps-1 pe-1 bg-primary-subtle">
+  <div class="container">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
+      <div class="col-md-3 mb-2 mb-md-0">
+        <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+            <p class="fw-bold my-auto fs-5">Blogger</p>
+        </a>
+      </div>
+
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="/" class="nav-link px-2 link-opacity-50">Home</a></li>
+        <% if (locals.user) { %>
+          <li><a href="?author=ME" class="nav-link px-2 link-opactiy-50">My Posts</a></li>
+        <% } %>
+        <li><a href="/about" class="nav-link px-2 link-opactiy-50">About</a></li>
+      </ul>
+      
+      <div class="col-md-3 text-end d-flex align-items-middle w-auto">
+        <% if (locals.loggedIn) { %>
+          <a href="/new" class="btn btn-primary text-decoration-none link-light p-2 rounded my-auto">New Post</a>
+          <button type="button" class="btn p-2 my-auto mx-2 btn-danger" id="btn-logout">Logout</a>
+          <% } else { %>
+          <a href="/login" class="btn p-2 my-auto mx-2 btn-primary">Login</a>
+        <% } %>
+      </div>
+    </header>
+  </div>
+</div>

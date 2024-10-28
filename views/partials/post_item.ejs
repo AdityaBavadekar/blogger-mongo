@@ -1,0 +1,25 @@
+<div class="container" id="post-parent">
+    <div class="container justify-content-center d-flex py-3">
+        <img src="<%= post ? post.thumbnailUrl : '' %>" id="post-thumbnail" alt="Image" class="rounded img-fluid">
+    </div>
+    <h1 class="pt-3 pb-5" id="post-title" style="font-size: 80px;"><%= post ? post.title : '' %></h1>
+    <p class="text-opacity-50 bg-info-subtle rounded p-3 border">Created by
+        <a href="/?author=<%= post ? post.author : '' %>" id="post-author" class="fw-bold text-decoration-none py-3">@<%= author ? author.name : '' %></a> on <span class="font-monospace" id="post-date"><%= post ? post.createdAt.toDateString() : '' %></span></p>
+    <!-- Social media links -->
+    <div class="container d-flex gap-4 py-3">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=PLACEHOLDER" target="_blank" class="btn btn-primary"><i class="bi bi-facebook"></i></a>
+        <a href="https://twitter.com/intent/tweet?url=PLACEHOLDER&text=Hello,%20I%20am%20sharing%20this%20blogpost%20from%20%22Blogger%22%20website." class="btn btn-primary" target="_blank"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=PLACEHOLDER" class="btn btn-primary" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <button type="button" class="btn btn-primary"><i class="bi bi-clipboard me-2"></i> Copy</button>
+    </div>
+    <hr>
+    <p id="post-content" class="px-3 my-5" id="post-content"><%= post ? post.content : '' %></p>
+</div>
+<style>
+    #post-content img {
+        max-width: 100%;
+        border-radius: .25rem;
+        margin: 0 8px;
+        height: auto;
+    }
+</style>
