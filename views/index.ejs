@@ -13,11 +13,20 @@
                     </div>
                 </div>
             </a>
+            <div class="container py-2 px-3 card">
+                <% if (locals.user && locals.user.uid == post.authorUid) { %>
+                    <button type="button" class="btn btn-danger delete-post-btn" name="<%- post._id %>">Delete</button>
+                <% } %>
+            </div>
         </li>
     <% }) %>
 </ul>
+
+<script src="/js/delete_post.js"></script>
+
 <style>
     #disp-post-item:hover {
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
 </style>
+

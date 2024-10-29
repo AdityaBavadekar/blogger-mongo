@@ -29,6 +29,7 @@ router.get('/', async (req, res) => {
         for (let index = 0; index < postsData.length; index++) {
             const post = postsData[index];
             post.content = post.content.substring(0,100) + '...';
+            post['authorUid'] = post.author;
             const authorName = await User.find({ uid: post.author })
             post.author = authorName[0].name;
             postsData[index] = post;

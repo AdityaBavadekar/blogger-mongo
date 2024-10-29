@@ -49,4 +49,17 @@ apiRouter.post('/post/new', (req, res) => {
     res.status(200).send(JSON.stringify(post));
 })
 
+apiRouter.delete('/post/:id', (req, res) => {
+    const postId = req.params.id;
+
+    Post.findByIdAndDelete(postId)
+    .then(()=>{
+        return res.status(200).json(JSON.stringify({msg: "Post Deleted"}));
+    })
+    .catch(e=>{
+        console.log("Error while deleting post");
+        res.status(500).json(JSON.stringify({msg:"Unable to delete the post"}))
+    })
+})
+
 export default apiRouter;
