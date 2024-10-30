@@ -5,6 +5,9 @@ Blogger web project
 | --- | --- |
 | ![](/screenshots/image1.png) | ![](/screenshots/image2.png) |
 
+## Demo on Youtube
+[Watch video on YouTube](https://youtu.be/D3oo6gh-VSw)
+
 # License
 ```
    Copyright 2024 Aditya Bavadekar
