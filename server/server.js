@@ -6,6 +6,7 @@ import apiRouter from './routes/api.js';
 import expressEjsLayouts from 'express-ejs-layouts';
 import session from 'express-session';
 import MongoStore from 'connect-mongo';
+import path from 'path';
 
 configDotenv();
 connectDB();
@@ -17,7 +18,7 @@ app.use(expressEjsLayouts);
 app.set('view engine', 'ejs');
 app.set('layout', './layouts/main');
 app.use(express.static('public'));
-app.set('views', __dirname + '/../views');
+app.set('views', path.join(path.resolve(), 'views'));
 
 app.use(express.json())
 
