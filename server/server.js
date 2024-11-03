@@ -17,7 +17,7 @@ app.use(expressEjsLayouts);
 app.set('view engine', 'ejs');
 app.set('layout', './layouts/main');
 app.use(express.static('public'));
-app.set('views', '../views');
+app.set('views', __dirname + '/../views');
 
 app.use(express.json())
 
