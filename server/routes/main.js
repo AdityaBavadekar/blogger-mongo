@@ -34,7 +34,7 @@ router.get('/', async (req, res) => {
             post.author = authorName[0].name;
             postsData[index] = post;
         }
-        res.render('index', { locals, posts: postsData });
+        res.render('index.ejs', { locals, posts: postsData });
     } catch (error) {
         console.log("Error in Home Page", error);
     }
