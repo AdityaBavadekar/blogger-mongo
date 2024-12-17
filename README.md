@@ -1,5 +1,6 @@
 # Blogger
 Blogger web project
+- Deployed at : https://blogger-mongo.vercel.app/
 
 |   |    |
 | --- | --- |
@@ -8,6 +9,7 @@ Blogger web project
 
 ## Demo on Youtube
 [Watch video on YouTube](https://youtu.be/D3oo6gh-VSw)
+
 
 
 ## Running the Locally
