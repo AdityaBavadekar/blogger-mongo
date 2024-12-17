@@ -13,11 +13,12 @@ connectDB();
 
 const app = express();
 const PORT = 5080 || process.env.PORT;
+const __dirname = path.resolve();
 
 app.use(expressEjsLayouts);
 app.set('view engine', 'ejs');
 app.set('layout', './layouts/main');
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, './public')));
 app.set('views', path.join(path.resolve(), 'views'));
 
 app.use(express.json())

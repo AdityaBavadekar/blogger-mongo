@@ -2,11 +2,9 @@ import mongoose from 'mongoose';
 import { configDotenv } from 'dotenv';
 configDotenv();
 
-const connection_string = process.env.MONGO_URI;
-
 const connectDB = async () => {
     try {
-        await mongoose.connect(connection_string, {});
+        await mongoose.connect(process.env.MONGO_URI);
         console.log('MongoDB connected');
     } catch (error) {
         console.log("Unable to connect to mongo db");

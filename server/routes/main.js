@@ -12,7 +12,6 @@ function collectBasicLocals(req) {
 
 // Main Home page
 router.get('/', async (req, res) => {
-    console.log(req.session);
     var { author } = req.query;
     var selectionClause = {}
     if (author == 'ME'){

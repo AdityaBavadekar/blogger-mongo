@@ -5,8 +5,51 @@ Blogger web project
 | --- | --- |
 | ![](/screenshots/image1.png) | ![](/screenshots/image2.png) |
 
+
 ## Demo on Youtube
 [Watch video on YouTube](https://youtu.be/D3oo6gh-VSw)
+
+
+## Running the Locally
+
+Follow these steps to set up and run the project:
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/AdityaBavadekar/blogger-mongo
+```
+
+### 2. Navigate to the Project Directory
+
+```bash
+cd blogger-mongo
+```
+
+### 3. Install Dependencies
+
+```bash
+npm i
+```
+
+### 4. Set Up Environment Variables
+
+A `.env.sample` file is provided as a template. Create a `.env` file in the backend directory by copying that sample file, and add Mongo DB connection string.
+
+### 5. Start the Server
+
+Run the following command to start the server:
+
+```bash
+npm run dev
+```
+
+View the Application: http://localhost:5080
+
+
+# Author
+- Aditya Bavadekar
+
 
 # License
 ```
@@ -25,6 +68,3 @@ Blogger web project
    limitations under the License.
 
 ```
-
-# Author
-- Aditya Bavadekar

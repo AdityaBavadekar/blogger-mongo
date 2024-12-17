@@ -32,8 +32,6 @@ document.getElementById('btn-publish').addEventListener('click', async ()=>{
         body: JSON.stringify({title: title, content: content, thumbnail: thumbnailUrl})
     })
     .then(response => {
-        console.log(response.status);
-        
         if (response.status == 200) {
             console.log("Successfully published post");
             document.getElementById('btn-publish').disabled = true;
